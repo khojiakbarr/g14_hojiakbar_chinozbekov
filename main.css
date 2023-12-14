@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  max-width: 500px;
+  padding: 30px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.userName {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.level {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h3 {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.form-select {
+  max-width: 90px;
+}
+
+.size {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.size h4 {
+  margin-top: 6px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.size_pizza {
+  padding: 25px 15px;
+  border: 1px solid black;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.4s ease;
+}
+
+.size_pizza:hover {
+  color: white;
+  background-color: black;
+}
+
+.about_pizza {
+  margin-top: 20px;
+}
+
+.about_pizza h4 {
+  text-align: start;
+}
+
+.col-6 {
+  margin: 10px 0;
+}
+
+.add_plus {
+  margin-top: 20px;
+}
+
+.add_plus h3 {
+  text-align: start;
+  margin-top: 6px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.col-6 {
+  text-align: start;
+}
+
+button {
+  margin-top: 20px;
+  width: 9em;
+  height: 3em;
+  border-radius: 30em;
+  font-size: 15px;
+  font-family: inherit;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 6px 6px 12px #c5c5c5,
+    -6px -6px 12px #ffffff;
+}
+
+button::before {
+  content: '';
+  width: 0;
+  height: 3em;
+  border-radius: 30em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+}
+
+button:hover::before {
+  width: 9em;
+}
+
+.card_info {
+  padding: 20px;
+  margin-left: 20px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.price h4{
+margin-top: 20px;
+}
+.col-12 {
+  margin-bottom: 10px;
+  text-align: center;
+}

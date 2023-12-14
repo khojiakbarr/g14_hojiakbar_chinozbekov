@@ -156,3 +156,33 @@ margin-top: 20px;
   margin-bottom: 10px;
   text-align: center;
 }
+.order1{
+  text-align: start;
+}
+.prise__pizza{
+  font-weight: 300;
+}
+
+input[name="size"] {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+}
+
+input[name="size"] + label  {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+input[name="size"]:checked + label {
+  background-color: #333;
+  color: #d3d3d3;
+}

@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="./main.css">
   <title>Document</title>
 </head>
@@ -14,84 +15,91 @@
     <div class="card">
       <h2>Pizza order</h2>
       <div class="userName">
-        <input id="name" type="text" placeholder="User name">
+        <input  id="name" type="text" placeholder="User name">
         <input id="Phone" type="tel" placeholder="Phone number">
         <input id="adres" type="text" placeholder="User adress">
       </div>
       <div class="level">
         <h3>Dought thickness:</h3>
-      <select id="selekt" class="form-select form-select-sm" aria-label="Small select example">
-        <option value="1" >none</option>
-        <option value="2" >Thin</option>
-        <option value="3" >Medium</option>
-        <option value="4" >thinck</option>
-      </select>
+        <select id="selekt" class="form-select form-select-sm" aria-label="Small select example">
+          <option id="none" value="">none</option>
+          <option id="thin" value="Thin">Thin</option>
+          <option id="medium" value="Medium">Medium</option>
+          <option id="n" value="Thinck">thinck</option>
+        </select>
       </div>
       <div class="size">
         <h4>Size:</h4>
-        <span onclick="" class="size_pizza">25sm</span>
-        <span onclick="" class="size_pizza">30sm</span>
-        <span onclick="" class="size_pizza">35sm</span>
+        <input type="radio" name="size" id="size25" value="25" checked>
+        <label for="size25">
+          25sm
+        </label>
+        <input type="radio" name="size" id="size30" value="30">
+        <label for="size30">
+          30sm
+        </label>
+        <input type="radio" name="size" id="size35" value="35">
+        <label for="size35">
+          35sm
+        </label>
       </div>
       <div class="about_pizza">
         <h4>On pizza:</h4>
         <div class="about_pizza_checkbox">
-          <div class="row">
-            <div class="col-6">
-              <label for="tomato">
-                <input type="checkbox" id="tomato">
-                Tomato
-              </label>
-            </div>
-              <label for="pickled" class="col-6">
-                <input type="checkbox" id="pickled">
-                Pickled cucumber
-              </label>
+          <div class="row box">
+            <label class="col-6" for="tomato">
+              <input value="Tomato" type="checkbox" id="tomato">
+              Tomato
+            </label>
+            <label for="pickled" class="col-6">
+              <input value="Pickled cucumber" type="checkbox" id="pickled">
+              Pickled cucumber
+            </label>
             <label for="turkey" class="col-6">
-              <input type="checkbox" id="turkey">
+              <input value="Turkey meat" type="checkbox" id="turkey">
               Turkey meat
             </label>
             <label for="mush" class="col-6">
-              <input type="checkbox" id="mush">
+              <input value="Mushroom" type="checkbox" id="mush">
               Mushroom
             </label>
-          
-          <label for="olive" class="col-6">
-            <input type="checkbox" id="olive">
-            Olive
-          </label>
-          <label for="horse" class="col-6">
-            <input type="checkbox" id="horse">
-            Horse meat
-          </label>
-        </div>
+
+            <label for="olive" class="col-6">
+              <input value="Olive" type="checkbox" id="olive">
+              Olive
+            </label>
+            <label for="horse" class="col-6">
+              <input value="Horse meat" type="checkbox" id="horse">
+              Horse meat
+            </label>
+          </div>
         </div>
       </div>
       <div class="add_plus">
         <h3>Add:</h3>
-        <div class="row">
+        <div class="row plus">
           <label for="pepper" class="col-6">
-            <input type="checkbox" id="pepper">
+            <input value="Pepper" type="checkbox" id="pepper">
             Pepper
           </label>
           <label for="sosiska" class="col-6">
-            <input type="checkbox" id="sosiska">
-           Sausages
+            <input value="Sausages" type="checkbox" id="sosiska">
+            Sausages
           </label>
         </div>
       </div>
-      <center><button class="button" id="submite">Save</button></center>
+      <center><button onclick="save()" class="button" id="submite">Save</button></center>
     </div>
     <div class="card_info">
-      <h4>Thin - $10</h4>
-      <h4>Medium - $12</h4>
-      <h4>Thick - $15</h4>
-      
+      <h4 class="prise__pizza">Thin - $10</h4>
+      <h4 class="prise__pizza">Medium - $12</h4>
+      <h4 class="prise__pizza">Thick - $15</h4>
+
       <div class="row price">
         <h4>Size:</h4>
-        <span class="col-12">25sm - $10</span>
-        <span class="col-12">30sm - $12</span>
-        <span class="col-12">35sm - $15</span>
+        <span onclick="" class="col-12">25sm - $10</span>
+        <span onclick="" class="col-12">30sm - $12</span>
+        <span onclick="" class="col-12">35sm - $15</span>
       </div>
       <div class="row">
         <h3 class="col-6"> On Pizza:</h3>
@@ -101,12 +109,38 @@
         <h3 class="col-6"> Add:</h3>
         <span class="col-6">every - $3</span>
       </div>
+
+      <div id="card" class="card row">
+        <!-- <h2 class="col-12 order1">Order:1</h2>
+        <h5 class="col-6">Name:</h5>
+        <span class="col-6"></span>
+        <h5 class="col-6">Phone:</h5>
+        <span class="col-6"> </span>
+        <h5 class="col-6">Adress:</h5>
+        <span class="col-6"></span>
+        <hr>
+        <h5 class="col-6">Dough thickness:</h5>
+        <span class="col-6"></span>
+        <h5 class="col-6">SIze:</h5>
+        <span class="col-6"></span>
+        <h5 class="col-6">On Pizza:</h5>
+        <span class="col-6"></span>
+        <h5 class="col-6">Add:</h5>
+        <hr>
+        <h5 class="col-6">Total:</h5>
+        <span class="col-6"></span> -->
+
+
+      </div>
     </div>
-    
+
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 
   <script src="main.js"></script>
+  <!-- https://cerulean-pavlova-66154a.netlify.app/ -->
 </body>
 
 </html>
